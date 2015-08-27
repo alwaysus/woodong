@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+		<title>Sample SpringBoot Project</title>
+	</head>
+	<body>
+		<div class="container">
+			<h2>Sample! <span th:text="${name}">${name}</span></h2>
+			<div>Thymeleaf version</div>
+			<div th:each="sample:${samplelist}">
+				<div th:text="${sample.name}"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,5 +1,6 @@
 package com.woodong.sample.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.woodong.sample.bean.Sample;
+import com.woodong.sample.bean.SampleBean;
 import com.woodong.sample.dao.SampleJpaDao;
 
 @RestController
@@ -25,5 +27,16 @@ public class SampleRestController {
 	public List<Sample> list(Model model) {
 		List<Sample> sampleList = sampleDao.findAll();
 		return sampleList;
+	}
+
+	@RequestMapping("/fgt/index")
+	public List<SampleBean> fgtSample() {
+		List<SampleBean> list = new ArrayList<SampleBean>();
+
+		list.add(new SampleBean("key1", "value1"));
+		list.add(new SampleBean("key2", "value2"));
+		list.add(new SampleBean("key3", "value3"));
+
+		return list;
 	}
 }

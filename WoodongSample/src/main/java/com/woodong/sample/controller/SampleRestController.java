@@ -10,22 +10,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.woodong.sample.bean.Sample;
 import com.woodong.sample.bean.SampleBean;
-import com.woodong.sample.dao.SampleJpaDao;
+import com.woodong.sample.mapper.SampleJpaMapper;
 
 @RestController
 public class SampleRestController {
 	@Autowired
-	private SampleJpaDao sampleDao;
+	private SampleJpaMapper sampleMapper;
 
 	@RequestMapping("/add")
 	public Sample add(Sample sample) {
-		Sample sampleData = sampleDao.save(sample);
+		Sample sampleData = sampleMapper.save(sample);
 		return sampleData;
 	}
 
 	@RequestMapping("/list")
 	public List<Sample> list(Model model) {
-		List<Sample> sampleList = sampleDao.findAll();
+		List<Sample> sampleList = sampleMapper.findAll();
 		return sampleList;
 	}
 

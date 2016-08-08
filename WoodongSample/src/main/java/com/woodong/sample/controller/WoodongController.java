@@ -8,12 +8,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.woodong.sample.bean.Sample;
-import com.woodong.sample.dao.SampleJpaDao;
+import com.woodong.sample.mapper.SampleJpaMapper;
 
 @Controller
 public class WoodongController {
 	@Autowired
-	private SampleJpaDao sampleDao;
+	private SampleJpaMapper sampleDao;
 
 	@RequestMapping("/sample")
 	public String sample(Model model) {

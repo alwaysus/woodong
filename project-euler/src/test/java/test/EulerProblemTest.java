@@ -6,14 +6,9 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"problem-solved-context.xml"})
-public class ProblemSolvedTest {
-	private Log log = LogFactory.getLog(ProblemSolvedTest.class);
+public class EulerProblemTest {
+	private Log log = LogFactory.getLog(EulerProblemTest.class);
 
 	@Test
 	public void problem_Number() {
